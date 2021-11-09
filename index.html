@@ -25,9 +25,9 @@
     const { loadModule } = window['vue3-sfc-loader'];
     const app = Vue.createApp({
       components: {
-        'my-component': Vue.defineAsyncComponent( () => loadModule('comps/calc/Calculator.vue', options) )
+        'my-component': Vue.defineAsyncComponent( () => loadModule('https://raw.githubusercontent.com/paul-hammant/VueSfcDemo/master/comps/calc/Calculator.vue', options) )
       },
-      template: '<my-component></my-component>'
+      template: '<my-component></my-component> <my-component></my-component>'
     });
     app.mount('#app');
   </script>
